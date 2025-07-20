@@ -6,6 +6,7 @@ import Paymentpage from "./pages/Paymentpage";
 import Confirmationpage from "./pages/Confirmationpage";
 import { ClerkProvider } from "@clerk/clerk-react";
 import { AuthProvider } from "./context/AuthContext";
+import { DestinationProvider } from "./context/DestinationContext";
 
 const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -15,16 +16,19 @@ const App = () => {
       <Router>
         <ClerkProvider publishableKey={clerkPubKey}>
           <AuthProvider>
-            <Routes>
-              <Route path="/" element={<Authpage />} />
-              <Route path="/home" element={<Homepage />} />
-              <Route path="/trip-details" element={<TripDetailspage />} />
-              <Route path="/payment-stripe" element={<Paymentpage />} />
-              <Route
-                path="/payment-confirmation"
-                element={<Confirmationpage />}
-              />
-            </Routes>
+            <DestinationProvider>
+              <Routes>
+                <Route path="/" element={<Authpage />} />
+                <Route path="/home" element={<Homepage />} />
+                <Route path="/destination/:id" element={<TripDetailspage />} />
+                <Route path="/trip-details" element={<TripDetailspage />} />
+                <Route path="/payment-stripe" element={<Paymentpage />} />
+                <Route
+                  path="/payment-confirmation"
+                  element={<Confirmationpage />}
+                />
+              </Routes>
+            </DestinationProvider>
           </AuthProvider>
         </ClerkProvider>
       </Router>

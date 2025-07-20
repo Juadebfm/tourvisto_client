@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useEffect } from "react";
 import { useAuth as useClerkAuth, useUser, useClerk } from "@clerk/clerk-react";
 import { useNavigate } from "react-router-dom";
 
@@ -15,6 +15,12 @@ export const AuthProvider = ({ children }) => {
   const { redirectToSignIn } = useClerk();
   // When all this is done we navigate the user to the homepage
   const navigate = useNavigate();
+
+  // User object values
+  useEffect(() => {
+    console.log("Auth Status:", { isLoaded, userLoaded, isSignedIn, user });
+    console.log("Clerk User Data:", user);
+  }, [isLoaded, userLoaded, isSignedIn, user]);
 
   // **************** //
   //   Signin Functionality
