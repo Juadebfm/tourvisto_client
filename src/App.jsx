@@ -21,7 +21,6 @@ const App = () => {
                 <Route path="/" element={<Authpage />} />
                 <Route path="/home" element={<Homepage />} />
                 <Route path="/destination/:id" element={<TripDetailspage />} />
-                <Route path="/trip-details" element={<TripDetailspage />} />
                 <Route path="/payment-stripe" element={<Paymentpage />} />
                 <Route
                   path="/payment-confirmation"

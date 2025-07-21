@@ -15,68 +15,6 @@ const FeaturedDestinations = () => {
   };
 
   return (
-    // <section className="py-20 px-32 bg-gray-50">
-    //   <div className="max-w-7xl mx-auto">
-    //     <div>
-    //       <h2 className="font-bold text-4xl leading-8 mb-3">
-    //         Featured Travel Destinations
-    //       </h2>
-    //       <p className="text-lg leading-6 text-[#7F7E83]">
-    //         Check out some of the best places you can visit around the world.
-    //       </p>
-    //     </div>
-
-    //     {/* Main grid */}
-    //     <div className="mt-10">
-    //       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 h-[500px]">
-    //         {/* Large featured card - LEFT SIDE */}
-
-    //         <div
-    //           className="lg:col-span-8 grid grid-cols-2 relative rounded-2xl overflow-hidden cursor-pointer shadow-lg"
-    //           //   onClick={() => handleCardClick(featuredDestinations[0].id)}
-    //         >
-    //           <img
-    //             src={featuredDestinations[0].image}
-    //             alt={featuredDestinations[0].name}
-    //             className="w-full h-full object-cover hover:scale-105 transition-all duration-300 ease-linear"
-    //           />
-
-    //           <div>3.5</div>
-    //           <div className="absolute bottom-4 left-4 text-white">
-    //             <h3 className="text-2xl font-bold">
-    //               {featuredDestinations[0].name}
-    //             </h3>
-    //             <p>{featuredDestinations[0].activities} Activities</p>
-    //           </div>
-    //         </div>
-    //         {/* Small Cards */}
-
-    //         <div>
-    //           {featuredDestinations.slice(1, 5).map((dest) => {
-    //             <div
-    //               key={dest.id}
-    //               className="relative rounded-2xl overflow-hidden cursor-pointer shadow-lg flex-1"
-    //               onClick={() => handleCardClick(dest.id)}
-    //             >
-    //               <img
-    //                 src={dest.image}
-    //                 alt={dest.name}
-    //                 className="w-full h-full object-cover hover:scale-105 transition-all duration-300"
-    //               />
-    //               <div className="absolute top-3 left-3 bg-white rounded-full px-2 py-1 text-sm">
-    //                 {dest.rating}
-    //               </div>
-    //               <div className="absolute bottom-3 left-3 text-white">
-    //                 <h4 className="font-bold">{dest.name}</h4>
-    //                 <p className="text-sm">{dest.activities} Activities</p>
-    //               </div>
-    //             </div>;
-    //           })}
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section>
     <section className="py-20 px-32 bg-gray-50 min-h-screen">
       <div className="max-w-7xl mx-auto">
         <div>
